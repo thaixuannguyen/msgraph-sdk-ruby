@@ -1,12 +1,12 @@
 require "odata"
-
-Dir[
-  File.join(
-    File.dirname(__FILE__),
-    'microsoft_graph',
-    '*'
-  )
-].each { |f| require f }
+require "microsoft_graph/base"
+require "microsoft_graph/base_entity"
+require "microsoft_graph/cached_metadata_directory"
+require "microsoft_graph/class_builder"
+require "microsoft_graph/collection"
+require "microsoft_graph/collection_association"
+require "microsoft_graph/errors"
+require "microsoft_graph/version"
 
 class MicrosoftGraph
   attr_reader :service
